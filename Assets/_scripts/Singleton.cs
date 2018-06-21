@@ -34,17 +34,17 @@ public class Singleton : MonoBehaviour {
 
         myBills = new List<Bills>();
         economyValueMin = 0;
-        economyValueMax = 25;
+        economyValueMax = 50;
         safetyValueMin = 0;
-        safetyValueMax = 25;
+        safetyValueMax = 50;
         environmentValueMin = 0;
-        environmentValueMax = 25;
+        environmentValueMax = 50;
         culturalValueMin = 0;
-        culturalValueMax = 25;
-        economyValue = 13;
-        culturalValue = 5;
-        environmentValue = 2;
-        safetyValue = 9;
+        culturalValueMax = 50;
+        economyValue = 25;
+        culturalValue = 25;
+        environmentValue = 25;
+        safetyValue = 25;
         AddBillsToList();
     }
     // Use this for initialization
@@ -90,7 +90,6 @@ public class Singleton : MonoBehaviour {
 
     public void AddBillsToList()
     {
-        myBills.Add(new Bills("test", 1, 2, 3, 4, 3, 2, 1, 2, true, temp));
         myBills.Add(new Bills("Het financieel ondersteunen van een park", -1, 0, 2, 1, 1, 0, -1, 0, true, temp));
         myBills.Add(new Bills("Bouw een school", -1, 0, 0, 1, 1, 0, 0, -1, true, temp));
         myBills.Add(new Bills("Laat een fabriek in de stad bouwen", 2, 0, -2, 0, -1, 0, 1, 0, true, temp));
