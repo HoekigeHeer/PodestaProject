@@ -19,7 +19,6 @@ public class Singleton : MonoBehaviour {
     public List<Bills> myBills;
     public Bills selectedBill;
     public GameObject temp;
-    public bool playerFailed;
 
     private void Awake()
     {
@@ -47,7 +46,6 @@ public class Singleton : MonoBehaviour {
         environmentValue = 25;
         safetyValue = 25;
         AddBillsToList();
-        playerFailed = false;
     }
     // Use this for initialization
     void Start () {

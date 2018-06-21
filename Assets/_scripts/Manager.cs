@@ -30,31 +30,5 @@ public class Manager : MonoBehaviour {
         cultureSlider.value = Singleton.mySingleton.culturalValue;
         safetySlider.value = Singleton.mySingleton.safetyValue;
         billNameDisplay.text = Singleton.mySingleton.selectedBill.billName;
-        CheckFailure();
-    }
-
-    void CheckFailure()
-    {
-        if (Singleton.mySingleton.playerFailed == false)
-        {
-            if (economicSlider.value == 0)
-            {
-
-            }
-
-            if (environmentSlider.value == 0)
-            {
-
-            }
-
-            if (safetySlider.value == 0)
-            {
-
-            }
-            if (cultureSlider.value == 0)
-            {
-
-            }
-        }
     }
 }
