@@ -20,7 +20,8 @@ public class Manager : MonoBehaviour {
         cultureSlider.minValue = Singleton.mySingleton.culturalValueMin;
         safetySlider.maxValue = Singleton.mySingleton.safetyValueMax;
         safetySlider.minValue = Singleton.mySingleton.safetyValueMin;
-	}
+        Singleton.mySingleton.selectedBill = Singleton.mySingleton.myBills[Random.Range(0, Singleton.mySingleton.myBills.Count)];
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,6 +29,6 @@ public class Manager : MonoBehaviour {
         environmentSlider.value = Singleton.mySingleton.environmentValue;
         cultureSlider.value = Singleton.mySingleton.culturalValue;
         safetySlider.value = Singleton.mySingleton.safetyValue;
-        billNameDisplay.text = Singleton.mySingleton.myBills[Random.Range(0, Singleton.mySingleton.myBills.Count)].billName;
+        billNameDisplay.text = Singleton.mySingleton.selectedBill.billName;
     }
 }

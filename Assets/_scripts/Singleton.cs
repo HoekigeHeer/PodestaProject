@@ -17,6 +17,7 @@ public class Singleton : MonoBehaviour {
     public int culturalValueMax;
     public int culturalValueMin;
     public List<Bills> myBills;
+    public Bills selectedBill;
     public GameObject temp;
 
     private void Awake()
@@ -52,8 +53,39 @@ public class Singleton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+		if (economyValue < economyValueMin)
+        {
+            economyValue = economyValueMin;
+        }
+        if (economyValue > economyValueMax)
+        {
+            economyValue = economyValueMax;
+        }
+        if (safetyValue < safetyValueMin)
+        {
+            safetyValue = safetyValueMin;
+        }
+        if (safetyValue > safetyValueMax)
+        {
+            safetyValue = safetyValueMax;
+        }
+        if (environmentValue < environmentValueMin)
+        {
+            environmentValue = environmentValueMin;
+        }
+        if (environmentValue > environmentValueMax)
+        {
+            environmentValue = environmentValueMax;
+        }
+        if (culturalValue < culturalValueMin)
+        {
+            culturalValue = culturalValueMin;
+        }
+        if (culturalValue > culturalValueMax)
+        {
+            culturalValue = culturalValueMax;
+        }
+    }
 
 
     public void AddBillsToList()

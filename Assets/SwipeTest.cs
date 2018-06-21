@@ -12,11 +12,21 @@ public class SwipeTest : MonoBehaviour
   
             if (swipeControls.SwipeLeft)
         {
-             Debug.Log("test");
+            Singleton.mySingleton.culturalValue = Singleton.mySingleton.culturalValue + Singleton.mySingleton.selectedBill.valueChangeCulturalOnNo;
+            Singleton.mySingleton.economyValue = Singleton.mySingleton.economyValue + Singleton.mySingleton.selectedBill.valueChangeEconomyOnNo;
+            Singleton.mySingleton.environmentValue = Singleton.mySingleton.environmentValue + Singleton.mySingleton.selectedBill.valueChangeEnvironmentOnNo;
+            Singleton.mySingleton.safetyValue = Singleton.mySingleton.safetyValue + Singleton.mySingleton.selectedBill.valueChangeSafetyOnNo;
+            Singleton.mySingleton.selectedBill = Singleton.mySingleton.myBills[Random.Range(0, Singleton.mySingleton.myBills.Count)];
+            //no
         }
             if (swipeControls.SwipeRight)
         {
-            Debug.Log("otherTest");
+            Singleton.mySingleton.culturalValue = Singleton.mySingleton.culturalValue + Singleton.mySingleton.selectedBill.valueChangeCulturalOnYes;
+            Singleton.mySingleton.economyValue = Singleton.mySingleton.economyValue + Singleton.mySingleton.selectedBill.valueChangeEconomyOnYes;
+            Singleton.mySingleton.environmentValue = Singleton.mySingleton.environmentValue + Singleton.mySingleton.selectedBill.valueChangeEnvironmentOnYes;
+            Singleton.mySingleton.safetyValue = Singleton.mySingleton.safetyValue + Singleton.mySingleton.selectedBill.valueChangeSafetyOnYes;
+            Singleton.mySingleton.selectedBill = Singleton.mySingleton.myBills[Random.Range(0, Singleton.mySingleton.myBills.Count)];
+            //yes
         }
     }
 }
